@@ -2,8 +2,9 @@
 
 ## Build
 
+Symbolic links need to work, so you may need to run as Administrator on Windows. Otherwise pathis in npm_modules are too long.
+
     vagrant up
-    vagrant docker-run app -- npm install
 
 NOTE: 'vagrant up' might fail the first time: try again.    
 
@@ -15,3 +16,7 @@ NOTE: 'vagrant up' might fail the first time: try again.
 
 ### Enable symlinks in Virtualbox
     "C:\Program Files"\Oracle\VirtualBox\VBoxManage" setextradata dockerhost VBoxInternal2/SharedFoldersEnableSymlinksCreate/app 1
+
+## History
+
+From https://github.com/DaftMonk/generator-angular-fullstack
