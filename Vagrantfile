@@ -27,39 +27,12 @@ Vagrant.configure(2) do |config|
     d.image = 'mongo:2.6'
   end
 
-  u.def_container 'app' do |d|
+  u.def_container 'web' do |d|
     d.build_dir = 'angular-fullstack'
     d.build_args = ['-t=fullstack-angular']
 
-    d.volumes = ["/vagrant/angular-fullstack:/usr/src/app"]
     d.ports = ['9000:9000']
     d.link  'db:db'
   end
-
-=begin
-  u.def_container 'app' do |d|
-    d.image = 'dockerfile/nodejs-bower-grunt'
-    d.link 'db:db'
-    d.cmd = ['bash']
-    d.remains_running = false
-  end
-=end
-  
-  # config.vm.synced_folder ".", "/vagrant"
-  # config.vm.synced_folder ".", "/usr/local/src"
-=begin
-  config.vm.define "app" do |app|
-    app.vm.provider "docker" do |d|
-      d.build_dir = "app"
-      d.name='app'
-      d.build_args = ['-t=app-i']
-      d.ports = ["8080:8080"]
-      d.volumes = ["/vagrant/app:/usr/local/src/app"]
-      d.remains_running = false
-      d.vagrant_machine = "dockerhost"
-      d.vagrant_vagrantfile = "./DockerHostVagrantfile"
-    end
-  end
-=end
-
+    
 end

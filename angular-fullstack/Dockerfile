@@ -19,4 +19,4 @@ RUN bower install --allow-root
 COPY . /usr/src/app/
 
 EXPOSE 9000
-CMD ["grunt", "serve", "--force"]
+CMD ["grunt", "serve"]

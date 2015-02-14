@@ -1,2 +1,4 @@
 *.coffee
 .tmp
+bower_components
+node_modules

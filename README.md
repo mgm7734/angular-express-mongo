@@ -17,6 +17,6 @@ NOTE: 'vagrant up' might fail the first time: try again.
 ### Enable symlinks in Virtualbox
     "C:\Program Files"\Oracle\VirtualBox\VBoxManage" setextradata dockerhost VBoxInternal2/SharedFoldersEnableSymlinksCreate/app 1
 
-## History
+## See also
 
 From https://github.com/DaftMonk/generator-angular-fullstack
