@@ -1,6 +1,6 @@
 .my-docs-container
   .my-docs-content(ng-transclude)
   nav.my-docs-index
-    ul.nav.my-docs-nav
+    ul.nav.my-docs-nav.hidden-xs
       li(ng-repeat='sect in sections')
         a(ng-href="#{{ anchor(sect.title) }}") {{ sect.title }}

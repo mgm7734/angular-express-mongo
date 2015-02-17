@@ -1,6 +1,11 @@
 .my-docs-content, .my-docs-index {
-  float: left;
+    float: left;
 }
-.my-docs-index {
-   margin-top: 20px;
+.my-docs-index > .nav {
+    padding-top: 20px;
+
+    > li {
+	margin-top: 5px;
+	> a { padding: 0; }
+    }
 }
