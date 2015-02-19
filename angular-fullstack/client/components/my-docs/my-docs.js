@@ -10,10 +10,10 @@ angular.module('angularFullstackApp').
       templateUrl: '/components/my-docs/my-docs.html',
       transclude: true,
       controller: function($scope) {
-	$scope.anchor = anchor
 	var sections = $scope.sections = [];
 
 	this.addSection = function(section) {
+	  section.anchor = anchor(section.title)
 	  sections.push(section);
 	}
       }

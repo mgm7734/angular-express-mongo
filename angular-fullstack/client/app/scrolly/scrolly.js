@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularFullstackApp').
+angular.module('angularFullstackApp') .
   config(function ($routeProvider) {
     $routeProvider.when('/scrolly', {
       templateUrl: 'app/scrolly/scrolly.html',
@@ -10,6 +10,6 @@ angular.module('angularFullstackApp').
   run(function($rootScope) {
     $rootScope.log = function(msg) { console.log(msg); }
   }).
-  controller('ScrollyCtrl', ['$scope', '$log', function($scope, $log) {
+  controller('ScrollyCtrl', function($scope, $log) {
     $log.log('hello, logger!@');
-  }]);
+  });
